@@ -1,16 +1,21 @@
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Singup from './component/Singup';
+import Home from './component/Home';
 import Signup2 from './component/Signup2';
+import Singup from './component/Singup';
 
 function App() {
   return (
     <div className="App">
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-         {/* <Signup2 /> */}
-          <Singup /> 
-      </LocalizationProvider>
+       <div>
+      <BrowserRouter>
+      <Routes>
+      <Route  path='/' element={<Home/>}></Route>
+      <Route  path='/signup' element={<Signup2/>}></Route>
+      <Route  path='/login' element={<Singup/>}></Route> 
+      </Routes>
+      </BrowserRouter>
+    </div>
     </div>
   );
 }

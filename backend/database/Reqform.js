@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://imsanafeer:<password>@cluster0.eovo6ks.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://imsanafeer:starfish@cluster0.eovo6ks.mongodb.net/?retryWrites=true&w=majority")
 
 const Schema = mongoose.Schema;
 var requestSchema = new  Schema({
